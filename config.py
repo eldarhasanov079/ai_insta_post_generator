@@ -1,2 +1,2 @@
-username = "artcity_baku"
-password = "Haci079079"
+username = "INSERT INSTAGRAM ACCOUNT USERNAME"
+password = "INSERT INSTAGRAM ACCOUNT PASSWORD"
