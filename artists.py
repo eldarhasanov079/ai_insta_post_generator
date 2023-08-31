@@ -1,3 +1,5 @@
+# Feel free to edit this list and add your own artists!
+
 famous_painters = [
     "Leonardo_da_Vinci",
     "Vincent_van_Gogh",
