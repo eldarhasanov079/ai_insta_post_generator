@@ -25,6 +25,9 @@ import openai
 API_KEY = open("API_KEY", "r").read()
 openai.api_key = API_KEY
 
+# EDIT YOUR CITY OF CHOICE HERE
+city = "Baku, Azerbaijan"
+
 
 artists_list = artists.famous_painters
 
@@ -71,16 +74,15 @@ def instagram_upload_post(image, description):
     # Post upload
     media = cl.photo_upload(
         path = image,
-        caption = description,
-        location = Location(name="Baku, Azerbaijan", lat=40.365929, lng=49.835123)
+        caption = description
     )
 
 def main():
     global artist_number
     artist_name = artists_list[artist_number]
 
-    image_prompt = "Baku, Azerbaijan if it was drawn by " + artist_name + " in artist's signature style"
-    text_prompt = "What would " + artist_name + " like about Baku, Azerbaijan and what would inspire him to draw the city?"
+    image_prompt = city + " if it was drawn by " + artist_name + " in artist's signature style"
+    text_prompt = "What would " + artist_name + " like about " + city + " and what would inspire him to draw the city?"
 
     image = save_image_from_url(generate_image(image_prompt), artist_name.replace(" ", "_") + ".jpg")
     text = generate_text(text_prompt)
